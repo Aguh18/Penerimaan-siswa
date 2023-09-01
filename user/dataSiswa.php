@@ -22,11 +22,22 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- penambahan: lokasi tempat -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!--penambahan: css untuk semua body  -->
+    <link href="../css/app.css" rel="stylesheet"> 
+
     <title>Data Pendaftaran - PENDAFTARAN SISWA</title>
 </head>
 
-<body class="bg-body-secondary">
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+<!-- hapus class di body -->
+<!-- <body class="bg-body-secondary"> -->
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bolder" href="../index.php">PENDAFTARAN SISWA</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -99,8 +110,32 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
 
             </div>
         </div>
-    </center>
+
+        <!-- penambahan untuk menampilkan map -->
+        <div style="position:relative">
+            <h3>Lokasi Sekolah</h3>
+            <div id="map" style="height: 250px; width: 250px;"></div>
+        </div>
+        <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- script lokasi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script>
+        var map = L.map('map', {
+            center: [-6.175398, 106.827157],
+            zoom: 12
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Nama Sekolah'
+        }).addTo(map);
+
+        // Add marker
+        var marker = L.marker([-6.175398, 106.827157]).addTo(map);
+        marker.bindPopup('This is the location of the school');
+    </script>
+    <!-- end scriptlokasi -->
 </body>
 
 </html>

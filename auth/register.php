@@ -29,9 +29,16 @@ if (isset($_POST["REGISTER"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Register - PENDAFTARAN SISWA</title>
+    
+    <!--penambahan: css untuk semua body  -->
+    <link href="../css/app.css" rel="stylesheet"> 
+
+
 </head>
 
-<body class="bg-body-secondary">
+<!-- hapus class di body -->
+<!-- <body class="bg-body-secondary"> -->
+<body>
     <div class="d-flex align-items-center justify-content-center" style="height: 40rem">
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 30rem">
             <div class="card-body text-center p-5">

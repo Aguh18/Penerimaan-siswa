@@ -28,11 +28,17 @@ if (isset($_GET['jurusan'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    <!--penambahan: css untuk semua body  --> 
+    <link href="../css/app.css" rel="stylesheet"> 
+
     <title>Administrator - Pendaftaran Siswa</title>
 </head>
 
-<body class="bg-body-secondary">
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+<!-- hapus class di body -->
+<!-- <body class="bg-body-secondary"> -->
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: green">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bolder" href="../index.php">PENDAFTARAN SISWA <small class="fw-normal">Administrator</small></a>
             <a class="nav-link float-end text-white fw-semibold" href="../auth/logout.php">LOGOUT</a>

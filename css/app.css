@@ -1,0 +1,8 @@
+body {
+    background: rgb(88,168,13);
+    background: radial-gradient(circle, rgba(88,168,13,1) 0%, rgba(67,228,48,1) 51%, rgba(39,167,21,1) 92%);
+}
+
+nav {
+    background-color: green;
+}
