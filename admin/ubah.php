@@ -37,11 +37,16 @@ if (isset($_POST["ubah"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    <!--penambahan: css untuk semua body  --> 
+    <link href="../css/app.css" rel="stylesheet"> 
     <title>Ubah Data Siswa - PENDAFTARAN SISWA</title>
 </head>
 
-<body class="bg-body-secondary">
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+<!-- <body class="bg-body-secondary"> -->
+<body>
+    <!-- hapus bg-primary class -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bolder" href="../index.php">PENDAFTARAN SISWA <small class="fw-normal">Administrator</small></a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
