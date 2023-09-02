@@ -49,8 +49,9 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
         </div>
     </nav>
 
-    <center><br>
-        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-5" style="width: 80rem">
+    <br>
+    <!-- tambah class mx-auto -->
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-5 mx-auto" style="width: 80%">
             <div class="card-body text-center ">
                 <h1 class="mb-5">Data Pendaftaran</h1>
 
@@ -110,11 +111,10 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
 
             </div>
         </div>
-
         <!-- penambahan untuk menampilkan map -->
-        <div style="position:relative">
-            <h3>Lokasi Sekolah</h3>
-            <div id="map" style="height: 250px; width: 250px;"></div>
+        <div style="right:-80%; bottom:10px; position:relative; height: 250px; width: 250px;background-color:aliceblue; display: inline-block">
+            <h3 class="text-center">Lokasi Sekolah</h3>
+            <div id="map" style="width:250px; height:250px"></div>
         </div>
         <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

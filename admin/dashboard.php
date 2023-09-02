@@ -45,9 +45,9 @@ if (isset($_GET['jurusan'])) {
         </div>
     </nav>
 
-    <div class="row mx-auto mt-5">
-        <div class="col">
-            <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-4" style="width: 16rem; height: 30rem">
+    <div class="d-flex flex-col" style="margin-top: 50px; margin-left:40px">
+        <!-- <div class="col"> -->
+            <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-4 fixed-right" style="margin-right:40px; width: 16rem; height: 30rem">
                 <div class="card-body text-center ">
                     <h5>MENU</h5>
                     <br><br>
@@ -60,9 +60,9 @@ if (isset($_GET['jurusan'])) {
                     <a href="../auth/logout.php" class="text-decoration-none text-danger ">LOGOUT</a>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class=" card shadow p-3 mb-5 bg-body-tertiary rounded mt-4" style="width: 65rem">
+        <!-- </div> -->
+        <!-- <div class="col"> -->
+            <div class=" card shadow p-3 mb-5 bg-body-tertiary rounded mt-4  mr-1" style="width: 75%">
                 <div class="card-body text-center ">
                     <h1 class="mb-5">Dashboard</h1>
                     <table class="table table-light table-responsive">
@@ -123,7 +123,7 @@ if (isset($_GET['jurusan'])) {
                     </table>
 
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
