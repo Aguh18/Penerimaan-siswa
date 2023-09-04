@@ -70,6 +70,7 @@ if (isset($_POST["ubah"])) {
                     <input type="text" name="nama" class="form-control mb-4" required placeholder="Nama" value="<?= $dataSiswa['nama']; ?>">
                     <input type="text" name="alamat" class="form-control mb-4" required placeholder="Alamat" value="<?= $dataSiswa['alamat']; ?>">
                     <input type="text" name="telp" class="form-control mb-4" required placeholder="Telepon" value="<?= $dataSiswa['telp']; ?>">
+                    <input type="text" name="asals" class="form-control mb-4" required placeholder="Asal sekolah" value="<?= $dataSiswa['asals']; ?>">
                     <select class="form-select" name="jurusan">
                         <option>Jurusan</option>
                         <option <?php if ($dataSiswa["jurusan"] == "IPA") { ?> selected <?php } ?> value="IPA">IPA (Ilmu Pengetahuan Alam)</option>

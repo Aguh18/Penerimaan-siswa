@@ -58,6 +58,7 @@ if (isset($_POST["daftar"])) {
                     <input type="number" name="nik" class="form-control mb-4" required placeholder="NIK">
                     <input type="text" name="nama" class="form-control mb-4" required placeholder="Nama">
                     <input type="text" name="alamat" class="form-control mb-4" required placeholder="Alamat">
+                    <input type="text" name="asals" class="form-control mb-4" required placeholder="Asal Sekolah">
                     <input type="text" name="telp" class="form-control mb-4" required placeholder="Telepon">
                     <select class="form-select" name="jurusan">
                         <option selected>Jurusan</option>

@@ -76,6 +76,7 @@ function daftar($data)
     $nik = htmlspecialchars($data["nik"]);
     $nama = htmlspecialchars($data["nama"]);
     $alamat = htmlspecialchars($data["alamat"]);
+    $asals = htmlspecialchars($data["asals"]);
     $telp = htmlspecialchars($data["telp"]);
     $jurusan = $data["jurusan"];
     $ver = 1;
@@ -94,7 +95,7 @@ function daftar($data)
     //Insert data ke database
     mysqli_query($conn, "INSERT INTO siswa
     VALUES
-    ('', '$nik', '$nama', '$alamat', '$telp', '$jurusan', '$ver', '$pendaftar');");
+    ('', '$nik', '$nama', '$alamat', '$telp', '$jurusan', '$ver', '$pendaftar','$asals');");
 
     return mysqli_affected_rows($conn);
 }
@@ -150,6 +151,7 @@ function ubahData($data)
     $nik = htmlspecialchars($data["nik"]);
     $nama = htmlspecialchars($data["nama"]);
     $alamat = htmlspecialchars($data["alamat"]);
+    $asals = htmlspecialchars($data["asals"]);
     $telp = htmlspecialchars($data["telp"]);
     $jurusan = $data["jurusan"];
     $ver = htmlspecialchars($data["ver"]);
@@ -164,7 +166,8 @@ function ubahData($data)
         telp = '$telp',
         jurusan = '$jurusan',
         ver = '$ver',
-        pendaftar = '$pendaftar'
+        pendaftar = '$pendaftar',
+        asals = '$asals'
         WHERE id='$id'"
     );
 

@@ -51,16 +51,17 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
 
     <br>
     <!-- tambah class mx-auto -->
-        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-5 mx-auto" style="width: 80%">
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-5 mx-auto" style="width: 90%">
             <div class="card-body text-center ">
                 <h1 class="mb-5">Data Pendaftaran</h1>
-
-                <table class="table table-light">
+                <div class="table-responsive mb-5">
+                <table class="table table-light  table-bordered ">
                     <tr>
                         <th>No.</th>
                         <th>NIK</th>
                         <th>Nama</th>
                         <th>Alamat</th>
+                        <th>Asal sekolah</th>
                         <th>Telp</th>
                         <th>Jurusan</th>
                         <th>Status</th>
@@ -76,6 +77,7 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
                             <td><?= $siswa["nik"]; ?></td>
                             <td><?= $siswa["nama"]; ?></td>
                             <td><?= $siswa["alamat"]; ?></td>
+                            <td><?= $siswa["asals"]; ?></td>
                             <td><?= $siswa["telp"]; ?></td>
                             <td><?= $siswa["jurusan"]; ?></td>
                             <td>
@@ -108,22 +110,26 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
                     }
                     ?>
                 </table>
+                </div>
 
+                  <!-- penambahan untuk menampilkan map -->
+        <a href="https://maps.app.goo.gl/QnoBX8jGkh7dWSy96?g_st=ic">   
+        <div style=" bottom:10px; position:relative; height: 250px; width: 80%;background-color:aliceblue; display: inline-block">
+            <h3 class="text-center">Lokasi Sekolah</h3>
+            <div id="map" style="width:80%px; height:250px"></div>
+        </div>
+        </a> 
+        <!-- end -->
             </div>
         </div>
-        <!-- penambahan untuk menampilkan map -->
-        <div style="right:-80%; bottom:10px; position:relative; height: 250px; width: 250px;background-color:aliceblue; display: inline-block">
-            <h3 class="text-center">Lokasi Sekolah</h3>
-            <div id="map" style="width:250px; height:250px"></div>
-        </div>
-        <!-- end -->
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <!-- script lokasi -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script>
         var map = L.map('map', {
-            center: [-6.175398, 106.827157],
+            center: [-8.698469126695255, 116.48340891534457],
             zoom: 12
         });
 
@@ -132,7 +138,7 @@ $dataSiswa = pendaftaranKu($_SESSION['id']);
         }).addTo(map);
 
         // Add marker
-        var marker = L.marker([-6.175398, 106.827157]).addTo(map);
+        var marker = L.marker([-8.698469126695255, 116.48340891534457]).addTo(map);
         marker.bindPopup('This is the location of the school');
     </script>
     <!-- end scriptlokasi -->

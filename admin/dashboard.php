@@ -45,6 +45,8 @@ if (isset($_GET['jurusan'])) {
         </div>
     </nav>
 
+
+
     <div class="d-flex flex-col" style="margin-top: 50px; margin-left:40px">
         <!-- <div class="col"> -->
             <div class="card shadow p-3 mb-5 bg-body-tertiary rounded mt-4 fixed-right" style="margin-right:40px; width: 16rem; height: 30rem">
@@ -63,15 +65,16 @@ if (isset($_GET['jurusan'])) {
         <!-- </div> -->
         <!-- <div class="col"> -->
             <div class=" card shadow p-3 mb-5 bg-body-tertiary rounded mt-4  mr-1" style="width: 75%">
-                <div class="card-body text-center ">
+                <div class="card-body text-center table-responsive">
                     <h1 class="mb-5">Dashboard</h1>
-                    <table class="table table-light table-responsive">
+                    <table class="table table-light ">
                         <tr>
                         <tr>
                             <th>No.</th>
                             <th>NIK</th>
                             <th>Nama</th>
                             <th>Alamat</th>
+                            <th>Asal sekolah</th>
                             <th>Telp</th>
                             <th>Jurusan</th>
                             <th>Status</th>
@@ -88,6 +91,7 @@ if (isset($_GET['jurusan'])) {
                                 <td><?= $siswa["nik"]; ?></td>
                                 <td><?= $siswa["nama"]; ?></td>
                                 <td><?= $siswa["alamat"]; ?></td>
+                                <td><?= $siswa["asals"]; ?></td>
                                 <td><?= $siswa["telp"]; ?></td>
                                 <td><?= $siswa["jurusan"]; ?></td>
                                 <td>

@@ -74,6 +74,7 @@ if (isset($_POST["ubah"])) {
                     <input type="hidden" name="pendaftar" value="<?= $dataSiswa['pendaftar']; ?>">
                     <input type="text" name="nama" class="form-control mb-4" required placeholder="Nama" value="<?= $dataSiswa['nama']; ?>">
                     <input type="text" name="alamat" class="form-control mb-4" required placeholder="Alamat" value="<?= $dataSiswa['alamat']; ?>">
+                    <input type="text" name="asals" class="form-control mb-4" required placeholder="Asal sekolah" value="<?= $dataSiswa['asals']; ?>">
                     <input type="text" name="telp" class="form-control mb-4" required placeholder="Telepon" value="<?= $dataSiswa['telp']; ?>">
                     <select class="form-select" name="jurusan">
                         <option>Jurusan</option>
